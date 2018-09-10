@@ -1,10 +1,12 @@
+#ifndef NETMAP_H_
+#define NETMAP_H_
 //Tipo do NetMap (uma estrutura com uma lista de roteadores e uma lista de terminais)
 typedef struct netmap NetMap;
 
 //O NetMap global para ser usado nas outras bibliotecas e na main
-NetMap* netMap;
+extern NetMap netMap;
 
-/*Conta quantos roteadores s„o da operadora de entrada
+/*Conta quantos roteadores s√£o da operadora de entrada
 * inputs: a string que contenha o nome da operadora
 * output: quantidade de roteadores da operadora
 * pre-condicao: 
@@ -12,7 +14,7 @@ NetMap* netMap;
 */
 int FrequenciaOperadora (char* operadora);
 
-/*Conta quantos terminais est„o na localizacao de entrada
+/*Conta quantos terminais est√£o na localizacao de entrada
 * inputs: a string que contenha uma localizacao
 * output: quantidade de terminais naquela regiao
 * pre-condicao: 
@@ -27,3 +29,5 @@ int FrequenciaTerminal (char* localizacao);
 * pos-condicao: nenhuma
 */
 void ImprimeNetMap ();
+
+#endif /* NETMAP_H_ */
