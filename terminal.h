@@ -1,3 +1,5 @@
+#ifndef TERMINAL_H_
+#define TERMINAL_H_
 //Tipo do terminal (sugiro uma estrutura com nome, localizacao e roteador)
 typedef struct terminal Terminal;
 
@@ -43,7 +45,8 @@ void RemoveTerminal (Terminal* term);
 * inputs: ponteiro para dois tipos Terminal
 * output: SIM se for possivel e NAO, caso contrario
 * pre-condicao: terminais existem
-* pos-condicao: terminais n„o sao modificados e foram feitas as verificacoes
+* pos-condicao: terminais n√£o sao modificados e foram feitas as verificacoes
 */
 char* EnviarPacoteDados (Terminal* term1, Terminal* term2);
 
+#endif /* TERMINAL_H_ */
