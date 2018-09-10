@@ -1,3 +1,5 @@
+#ifndef ROTEADOR_H_
+#define ROTEADOR_H_
 //Tipo do roteador, um item da celula (deve conter nome, operadora e ponteiro pra lista de roteadores na qual se conecta)
 typedef struct roteador Roteador;
 
@@ -5,7 +7,7 @@ typedef struct roteador Roteador;
 typedef struct celRot CelRot;
 
 //Tipo da lista de roteadores; (sugiro com sentinela pro retorno da maioria das funcoes ser void);
-typedef struct lsRot lsRot;
+typedef struct lsRot LsRot;
 
 /*Insere um roteador na lista de roteadores do NetMap na ultima posicao
 * inputs: ponteiro para o tipo Roteador
@@ -38,3 +40,5 @@ void ConectaRoteadores (Roteador* rot1, Roteador* rot2);
 * pos-condicao: roteador1 removido da lista de roteadores do roteador2 e vice-versa
 */
 void DesconectaRoteadores (Roteador* rot1, Roteador* rot2);
+
+#endif /* ROTEADOR_H_ */
