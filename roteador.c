@@ -34,13 +34,14 @@ void CadastraRoteador (char* rot, char* operadora, LsRot* listaRot){
 		
 		celR->ant = NULL;
 	}else{
+		listaRot->ult->prox = celR;
 		celR->ant = listaRot->ult;
 		listaRot->ult = celR;
 		
 	}
 };
 
-Roteador* criaRoteador(char* rot, char* operadora){        //Não é uma função obrigatória, mas essencial
+Roteador* criaRoteador(char* rot, char* operadora){ //Não é uma função obrigatória, mas essencial
 	Roteador* r = (Roteador*) malloc(sizeof(Roteador));	
 	r->nome = (char*) malloc((strlen(rot)+1)*sizeof(char));
 	r->operadora = (char*) malloc((strlen(operadora)+1)*sizeof(char));
@@ -53,7 +54,7 @@ Roteador* criaRoteador(char* rot, char* operadora){        //Não é uma funçã
 	return r;
 }
 
-LsRot* InicializaListaRot(){                              //Não é uma função obrigatória, mas essencial
+LsRot* InicializaListaRot(){                    //Não é uma função obrigatória, mas essencial
 	LsRot* listaRt = (LsRot*) malloc(sizeof(LsRot));
 	listaRt->prim = NULL;
 	listaRt->ult = NULL;
